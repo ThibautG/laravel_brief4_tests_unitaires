@@ -43,6 +43,8 @@ Il faut que vos tests couvrent un maximum (idéalement toutes) de possibilités.
 
 ## Tests effectués
 
+### Manuellement
+
 - Création nouveau produit - OK
 - Modification produit - OK
 - Affichage succès après MAJ produit - OK
@@ -70,5 +72,8 @@ Il faut que vos tests couvrent un maximum (idéalement toutes) de possibilités.
       - `'price' => 'required|numeric|min:0|decimal:0,2'`
       - `'stock' => 'required|integer|min:0'`
       - ==> OK pour `store` et `update`
-    - Modifier les vues create et edit - ajout `maxLength` ==> OK 
-- 
+    - Modifier les vues create et edit - ajout `maxLength` ==> OK
+
+### Automatisés 
+
+Voir [tests/Unit/ProductTest.php](tests/Unit/ProductTest.php)
