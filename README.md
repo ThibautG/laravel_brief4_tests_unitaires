@@ -39,3 +39,36 @@ En tant que développeur Web, l’équipe vous confie la responsabilité d’éc
    2. Tester l'affichage des messages de succès
 
 Il faut que vos tests couvrent un maximum (idéalement toutes) de possibilités. À vous de corriger le code lors d'un échec lors des tests.
+
+
+## Tests effectués
+
+- Création nouveau produit - OK
+- Modification produit - OK
+- Affichage succès après MAJ produit - OK
+- Suppression produit - OK
+- Validation avant suppression - OK
+- Affichage succès après suppression - OK
+- Détails produit - OK
+- Route modif depuis détails - OK
+- Route suppression depuis détails - OK
+- Redirection après modif ou supp - OK
+- Modification des btn redirection dans edit view - OK
+- Lister les produits code 200 - OK
+- Le CRUD est sauvegardé en BDD - OK
+- Vérifier erreurs validation formulaire:
+  - Stock doit être un entier - OK (front)
+  - Prix à virgule converti en point dans BDD - OK
+  - Nom vide - OK (front)
+  - Stock non vide - OK
+  - Prix number - OK
+  - Protection injection SQL - OK
+  - Limiter nb de caractères - NOK
+    - Modif ProductController
+      - `'name' => 'required|string|max:50'`
+      - `'description' => 'nullable|string|max:255'`
+      - `'price' => 'required|numeric|min:0|decimal:0,2'`
+      - `'stock' => 'required|integer|min:0'`
+      - ==> OK pour `store` et `update`
+    - Modifier les vues create et edit - ajout `maxLength` ==> OK 
+- 
