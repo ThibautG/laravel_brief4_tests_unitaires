@@ -3,7 +3,8 @@ name: CI Tests
 on:
   push:
     branches: [ main ]
-
+    paths:
+      - 'laravel_brief4_tests_unitaires/**'
   pull_request:
     branches: [ main ]
 
