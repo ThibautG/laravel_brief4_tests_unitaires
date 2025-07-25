@@ -24,12 +24,12 @@ En tant que développeur Web, vous êtes chargé de mettre en place l’intégra
 
 ### Étapes :
 
-1. Créez un fichier .github/workflows/laravel-tests.yml.
+1. Créez un fichier .github/workflows/laravel-tests.yml
 2. Le pipeline doit :
-    1. Installer PHP, Composer, et les dépendances.
-    2. Exécuter les migrations (php artisan migrate).
+    1. Installer PHP, Composer, et les dépendances
+    2. Exécuter les migrations (php artisan migrate)
     3. Lancer les tests (php artisan test).
-3. Affichez un badge de statut dans le README.md.
+3. Affichez un badge de statut dans le README.md
 
 ## Modalités d'évaluation
 
