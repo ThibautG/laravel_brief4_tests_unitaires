@@ -6,7 +6,6 @@
 
 ![Laravel](https://img.shields.io/badge/Laravel-12.20.0-red?logo=laravel)
 
-
 ## Tests effectués
 
 ### Manuellement
