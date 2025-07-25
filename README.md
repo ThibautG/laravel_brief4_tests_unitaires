@@ -1,5 +1,12 @@
 # Tests et Intégration
 
+[![test-my-laravel-project](https://github.com/ThibautG/laravel_brief4_tests_unitaires/actions/workflows/laravel-tests.yml/badge.svg)](https://github.com/ThibautG/laravel_brief4_tests_unitaires/actions/workflows/laravel-tests.yml)
+
+![PHP](https://img.shields.io/badge/PHP-8.2-blue?logo=php)
+
+![Laravel](https://img.shields.io/badge/Laravel-12.20.0-red?logo=laravel)
+
+
 ## Tests effectués
 
 ### Manuellement

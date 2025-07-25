@@ -1,4 +1,4 @@
-name: test-my-laravel-project
+name: CI Tests
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
       - 'laravel_brief4_tests_unitaires/**'
   pull_request:
     branches: [ main ]
-  workflow_dispatch:
 
 env:
   php_version: 8.2
