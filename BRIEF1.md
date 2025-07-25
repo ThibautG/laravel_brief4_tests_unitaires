@@ -39,3 +39,18 @@ En tant que développeur Web, l’équipe vous confie la responsabilité d’éc
     2. Tester l'affichage des messages de succès
 
 Il faut que vos tests couvrent un maximum (idéalement toutes) de possibilités. À vous de corriger le code lors d'un échec lors des tests.
+
+## Modalités d'évaluation
+
+Les tests couvrent les possibilités des fonctions testées.\
+Le code est corrigé en conséquence.
+
+## Livrables
+Un fichier `tests/Feature/ProductControllerTest.php`\
+Un fichier `tests/Unit/ProductTest.php`\
+Utilisation d’une base de test propre (`RefreshDatabase`)\
+Utilisation de Factory pour générer les produits (`ProductFactory`)
+
+## Critères de performance
+Toutes les fonctions sont testées et toutes les possibilités sont étudiées.\
+Le code a été parfaitement corrigé et les tests passent sans échec.
