@@ -76,4 +76,5 @@ Il faut que vos tests couvrent un maximum (idéalement toutes) de possibilités.
 
 ### Automatisés 
 
-Voir [tests/Unit/ProductTest.php](tests/Unit/ProductTest.php)
+- [tests/Unit/ProductTest.php](tests/Unit/ProductTest.php)
+- [tests/Feature/ProductControllerTest.php](tests/Feature/ProductControllerTest.php)
