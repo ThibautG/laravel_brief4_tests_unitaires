@@ -30,10 +30,21 @@ jobs:
           php-version: ${{ env.php_version }}
           coverage: pcov
 
-      - name: Composer install
+      - name: Install Composer dependencies
         run: |
           composer validate --strict
           composer install --optimize-autoloader --no-interaction --prefer-dist
+
+      - name: Prepare SQLite database
+        run: |
+          mkdir -p database
+          touch database/database.sqlite
+
+      - name: Run migrations
+        run: php artisan migrate --force
+
+      - name: Seed database
+        run: php artisan db:seed --force
 
       - name: Test
         run: php artisan test
