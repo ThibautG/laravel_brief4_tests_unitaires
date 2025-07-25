@@ -56,6 +56,7 @@ Il faut que vos tests couvrent un maximum (idéalement toutes) de possibilités.
 - Route suppression depuis détails - OK
 - Redirection après modif ou supp - OK
 - Modification des btn redirection dans edit view - OK
+- Toutes les vues sont bien utilisées
 - Lister les produits code 200 - OK
 - Le CRUD est sauvegardé en BDD - OK
 - Vérifier erreurs validation formulaire:
@@ -78,3 +79,7 @@ Il faut que vos tests couvrent un maximum (idéalement toutes) de possibilités.
 
 - [tests/Unit/ProductTest.php](tests/Unit/ProductTest.php)
 - [tests/Feature/ProductControllerTest.php](tests/Feature/ProductControllerTest.php)
+
+Une modif à prévoir sur `ProductControllerTest.php` pour la fonction 
+`test_product_controller_update`: pour l'instant je teste seulement si la 
+modif a bien eu lieu dans la DB mais pas dans le front !
