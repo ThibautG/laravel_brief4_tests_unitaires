@@ -1,0 +1,44 @@
+name: test-my-laravel-project
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'laravel_brief4_tests_unitaires/**'
+  pull_request:
+    branches: [ main ]
+
+defaults:
+  run:
+    working-directory: ./laravel_brief4_tests_unitaires
+
+env:
+  DB_CONNECTION: sqlite
+  DB_DATABASE: database/database.sqlite
+  php_version: 8.2
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: test-my-laravel-project-${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v3
+
+      - name: Initialize PHP ${{ env.php_version }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.php_version }}
+          coverage: pcov
+
+      - name: Composer install
+        run: |
+          composer validate --strict
+          composer install --optimize-autoloader --no-interaction --prefer-dist
+
+      - name: Test
+        run: php artisan test
